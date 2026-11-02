@@ -1,0 +1,587 @@
+/* Базовые настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #f39c12;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Увеличенные вертикальные отступы секций */
+.section-padding {
+    padding: 110px 0;
+}
+
+.bg-light {
+    background-color: #f9f9f9;
+}
+
+/* Кнопки */
+.btn-orange {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.btn-orange:hover {
+    background-color: #e67e22;
+}
+
+.btn-orange:active {
+    transform: scale(0.98);
+}
+
+.btn-white {
+    background-color: white;
+    color: #333;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-white:hover {
+    background-color: #eee;
+}
+
+.small-btn {
+    padding: 5px 15px;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+/* Шапка — увеличена по высоте */
+.top-bar {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 18px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar a {
+    color: #000;
+    font-weight: bold;
+}
+
+.main-nav {
+    background-color: #fff;
+    padding: 28px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #555;
+    font-weight: 600;
+}
+
+/* Главный экран */
+.hero {
+    position: relative;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.hero p {
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+/* Заголовки секций */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2,
+h2 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+/* Карусель стрелки */
+.carousel-arrows button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.3s;
+    padding: 0 10px;
+}
+
+.carousel-arrows button:hover {
+    color: #333;
+}
+
+/* Преимущества */
+.advantages-grid {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    gap: 20px;
+}
+
+.advantage-item {
+    flex: 1;
+    padding: 20px;
+}
+
+.advantage-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+/* О нас */
+#about p {
+    margin-bottom: 15px;
+    max-width: 900px;
+}
+
+/* Подписка */
+.subscription {
+    background-color: #f39c12;
+    color: white;
+    padding: 45px 0;
+}
+
+.sub-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.sub-text h3 {
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.sub-text p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.sub-form {
+    display: flex;
+    gap: 10px;
+}
+
+.sub-form input {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Особенности */
+.features-list {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.feature-col ul li {
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.features-footer {
+    max-width: 800px;
+    font-size: 15px;
+    color: #555;
+}
+
+/* Каталог */
+.catalog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 1px solid #ccc;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: #f39c12;
+    color: white;
+    border-color: #f39c12;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    position: relative;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #f39c12;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.product-name {
+    font-size: 14px;
+    margin-bottom: 10px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.product-price {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Команда */
+.team-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex: 1;
+    min-width: 300px;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.member-info h4 {
+    margin-bottom: 5px;
+}
+
+.member-info p {
+    font-size: 13px;
+    color: #777;
+}
+
+/* Бренды */
+.brands-section {
+    background-color: #eaeaea;
+    padding: 55px 0;
+}
+
+.brands-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 20px;
+    color: #999;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Полезное */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.info-card {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 5px;
+    height: 200px;
+    /* Центрируем текст внутри карточки */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transition: transform 0.3s;
+}
+
+.info-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Затемнение поверх картинки*/
+.info-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+
+.info-card:hover .info-card-overlay {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Текст по центру картинки */
+.info-card p {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 15px;
+    font-size: 14px;
+    margin: 0;
+    text-align: center;
+    background: none;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Подвал */
+footer {
+    background-color: #eaeaea;
+    padding: 90px 0;
+    font-size: 13px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-col h4 {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+.footer-col p {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #666;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+/* Модальные окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    margin-top: -10px;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    outline: none;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+    border-color: #f39c12;
+}
+
+.text-center {
+    text-align: center;
+}

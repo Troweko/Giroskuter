@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-Giro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Шапка -->
+    <header>
+        <div class="top-bar">
+            <div class="container top-bar-content">
+                <span>Мы всегда рады помочь по телефону <a href="tel:+79235689013">+7 923 356 9013</a></span>
+                <button class="btn-orange" id="callOrderBtn">ЗАКАЗАТЬ ЗВОНОК</button>
+            </div>
+        </div>
+        <div class="main-nav">
+            <div class="container nav-content">
+                <div class="logo">My-Giro</div>
+                <nav>
+                    <ul>
+                        <li><a href="#advantages">ПРЕИМУЩЕСТВА</a></li>
+                        <li><a href="#about">О НАС</a></li>
+                        <li><a href="#features">ОСОБЕННОСТИ</a></li>
+                        <li><a href="#catalog">КАТАЛОГ</a></li>
+                        <li><a href="#team">КОМАНДА</a></li>
+                        <li><a href="#brands">БРЕНДЫ</a></li>
+                        <li><a href="#info">ПОЛЕЗНОЕ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Герой-секция -->
+    <section class="hero" style="background-image: url('img/hero.jpg');">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>My-Giro</h1>
+            <p>Крупнейший интернет-магазин гироскутеров, сигвеев и электросамокатов от известных мировых производителей
+            </p>
+            <a href="#catalog" class="btn-white">в каталог</a>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section id="advantages" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Наши преимущества</h2>
+                <div class="carousel-arrows">
+                    <button id="prevAdv">&lt;</button>
+                    <button id="nextAdv">&gt;</button>
+                </div>
+            </div>
+            <div class="advantages-grid" id="advantagesContainer">
+            </div>
+        </div>
+    </section>
+
+        <!-- О нас -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2>О НАС</h2>
+            <p>В нашем интернет-магазине представлен большой выбор гироскутеров, сигвеев и электросамокатов от известных
+                мировых производителей.</p>
+            <p>Все товары, представленные на нашем сайте, отобраны лучшими специалистами в этой области. Купить
+                гироскутер, электросамокат или сигвей недорого, Вы можете в нашем интернет-магазине в любое время, когда
+                Вам удобно. Доставка заказов осуществляется бесплатно, в любую точку России.</p>
+        </div>
+    </section>
+
+    <!-- Подписка -->
+    <section class="subscription">
+        <div class="container sub-content">
+            <div class="sub-text">
+                <h3>Подпишись на нашу рассылку</h3>
+                <p>и оставайтесь в курсе событий</p>
+            </div>
+            <form id="subscribeForm" class="sub-form">
+                <input type="text" id="subName" placeholder="Имя" required>
+                <input type="email" id="subEmail" placeholder="Email" required>
+                <button type="submit" class="btn-white">ПОДПИСАТЬСЯ</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Особенности -->
+    <section id="features" class="section-padding">
+        <div class="container">
+            <h2>Особенности гироскутеров</h2>
+            <div class="features-list">
+                <div class="feature-col">
+                    <ul>
+                        <li>- Трясёт</li>
+                        <li>- Нет сиденья</li>
+                        <li>- Только для одного</li>
+                    </ul>
+                </div>
+                <div class="feature-col">
+                    <ul>
+                        <li>+ Исключительная компактность</li>
+                        <li>+ Небольшой вес</li>
+                        <li>+ Экономичность</li>
+                    </ul>
+                </div>
+                <div class="feature-col">
+                    <ul>
+                        <li>+ Доступность</li>
+                        <li>+ Манёвренность</li>
+                        <li>+ Простой в освоении</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="features-footer">Этих преимуществ гироскутера вполне достаточно для того, чтобы в своей нише
+                данный вид транспорта являлся одним из самых лучших вариантов!</p>
+        </div>
+    </section>
+
+    <!-- Каталог -->
+    <section id="catalog" class="section-padding bg-light">
+        <div class="container">
+            <div class="catalog-header">
+                <h2>Каталог</h2>
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="gyro">Гироскутеры</button>
+                    <button class="filter-btn" data-filter="scooter">Электросамокаты</button>
+                    <button class="filter-btn" data-filter="sigway">Сигвеи</button>
+                </div>
+            </div>
+
+            <div class="catalog-grid" id="catalogGrid">
+                <!-- Товар 1 -->
+                <div class="product-card" data-category="sigway">
+                    <span class="product-badge orange">Сигвей</span>
+                    <img src="img/product6.jpg" alt="Сигвей">
+                    <p class="product-name">Xiaomi Ninebot mini Pro White (Белый)</p>
+                    <p class="product-price">31 480 р.</p>
+                </div>
+                <!-- Товар 2 -->
+                <div class="product-card" data-category="gyro">
+                    <span class="product-badge orange">Гироскутер</span>
+                    <img src="img/product3.jpg" alt="Гироскутер">
+                    <p class="product-name">Smart Balance SUV Черная Молния 10.5" PREMIUM PRO</p>
+                    <p class="product-price">8 590 р.</p>
+                </div>
+                <!-- Товар 3 -->
+                <div class="product-card" data-category="scooter">
+                    <span class="product-badge orange">Электросамокат</span>
+                    <img src="img/product9.jpg" alt="Электросамокат">
+                    <p class="product-name">SUBOR D9</p>
+                    <p class="product-price">11 790 р.</p>
+                </div>
+                <!-- Товар 4 -->
+                <div class="product-card" data-category="sigway">
+                    <span class="product-badge orange">Сигвей</span>
+                    <img src="img/product4.jpg" alt="Сигвей">
+                    <p class="product-name">Xiaomi Ninebot mini Pro Black (Черный)</p>
+                    <p class="product-price">31 480 р.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Консультанты -->
+    <section id="team" class="section-padding">
+        <div class="container">
+            <h2>Наши консультанты</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="img/consultant1.jpg" alt="Иван Алексеев">
+                    <div class="member-info">
+                        <h4>Иван Алексеев</h4>
+                        <p>менеджер по продажам</p>
+                        <button class="btn-orange small-btn open-consult-btn"
+                            data-name="Иван Алексеев">Написать</button>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="img/consultant2.jpg" alt="Галина Петрова">
+                    <div class="member-info">
+                        <h4>Галина Петрова</h4>
+                        <p>менеджер по продажам</p>
+                        <button class="btn-orange small-btn open-consult-btn"
+                            data-name="Галина Петрова">Написать</button>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="img/consultant3.jpg" alt="Светлана Астахова">
+                    <div class="member-info">
+                        <h4>Светлана Астахова</h4>
+                        <p>менеджер по продажам</p>
+                        <button class="btn-orange small-btn open-consult-btn"
+                            data-name="Светлана Астахова">Написать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Бренды -->
+    <section id="brands" class="brands-section">
+        <div class="container brands-list">
+            <span>XIAOMI</span>
+            <span>SMART</span>
+            <span>BALANCE</span>
+            <span>LINBOL</span>
+            <span>KUGOO</span>
+            <span>SUBOR</span>
+            <span>AIRWHEEL</span>
+        </div>
+    </section>
+
+    <!-- Полезная информация -->
+    <section id="info" class="section-padding">
+        <div class="container">
+            <h2>Полезная информация</h2>
+            <div class="info-grid">
+                <div class="info-card"
+                    data-info="Выбор гироскутера зависит от вашего бюджета и целей. Обратите внимание на мощность двигателя и размер колес.">
+                    <div class="info-card-overlay"></div>
+                    <img src="img/info1.jpg" alt="Как выбрать">
+                    <p>Как выбрать гироскутер? Советы перед покупкой</p>
+                </div>
+                <div class="info-card"
+                    data-info="Электросамокаты делятся на городские (легкие) и внедорожные (мощные). Для города лучше выбирать модель с хорошей амортизацией.">
+                    <div class="info-card-overlay"></div>
+                    <img src="img/info2.jpg" alt="Электросамокат">
+                    <p>Электросамокат. Какой лучше и как выбрать?</p>
+                </div>
+                <div class="info-card"
+                    data-info="При выборе сигвея обратите внимание на максимальную нагрузку и наличие сертификатов безопасности.">
+                    <div class="info-card-overlay"></div>
+                    <img src="img/info3.jpg" alt="Сигвей">
+                    <p>Как выбрать сигвей? На что обратить внимание?</p>
+                </div>
+                <div class="info-card"
+                    data-info="Для детей лучше выбирать гироскутеры с ограничением скорости и небольшим диаметром колес (6.5 дюймов).">
+                    <div class="info-card-overlay"></div>
+                    <img src="img/info4.jpg" alt="Ребенку">
+                    <p>Советы по выбору гироскутера для ребенка</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <p>В нашем интернет-магазине представлен большой выбор гироскутеров, сигвеев и электросамокатов от
+                    известных мировых производителей.</p>
+                <p>Все товары, представленные на нашем сайте, отобраны лучшими специалистами в этой области.</p>
+                <p class="copyright">Copyright © 2020 My-Giro</p>
+            </div>
+            <div class="footer-col">
+                <h4>КОМПАНИЯ MY-GIRO</h4>
+                <ul>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#advantages">Наши преимущества</a></li>
+                    <li><a href="#team">Наши консультанты</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>ПОКУПАТЕЛИ</h4>
+                <ul>
+                    <li><a href="#catalog">Каталог</a></li>
+                    <li><a href="#brands">Бренды</a></li>
+                    <li><a href="#info">Полезная информация</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>ПОМОЩЬ</h4>
+                <ul>
+                    <li><a href="#">Как оформить заказ</a></li>
+                    <li><a href="#">Способы оплаты</a></li>
+                    <li><a href="#">Обмен и возврат товара</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальные окна -->
+    <div class="modal" id="callModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Заказать звонок</h3>
+            <form id="callForm">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="tel" placeholder="Номер телефона" required>
+                <input type="email" placeholder="Email" required>
+                <button type="submit" class="btn-orange">Заказать звонок</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="consultModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 id="consultTitle">Написать консультанту</h3>
+            <form id="consultForm">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="email" placeholder="Ваша почта" required>
+                <textarea placeholder="Ваше письмо" rows="4" required></textarea>
+                <button type="submit" class="btn-orange">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="infoModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Полезная информация</h3>
+            <p id="infoText"></p>
+        </div>
+    </div>
+
+    <div class="modal" id="alertModal">
+        <div class="modal-content text-center">
+            <span class="close-btn">&times;</span>
+            <p id="alertText" style="margin-top: 15px; font-size: 18px;"></p>
+        </div>
+    </div>
+
+    <script>
+        //КАРУСЕЛЬ ПРЕИМУЩЕСТВ
+        let advantages = [
+            { img: 'img/100-kachestvo.png', text: 'Гарантия качества' },
+            { img: 'img/bistraya-dostavka.png', text: 'Быстрая доставка' },
+            { img: 'img/bolshoy-assortiment.png', text: 'Большой ассортимент' },
+            { img: 'img/consultant.png', text: 'Онлайн-консультант' }
+        ];
+        const advContainer = document.getElementById('advantagesContainer');
+
+        function renderAdvantages() {
+            advContainer.innerHTML = '';
+            advantages.forEach(item => {
+                advContainer.innerHTML += `
+                    <div class="advantage-item">
+                        <img src="${item.img}" alt="${item.text}">
+                        <p>${item.text}</p>
+                    </div>
+                `;
+            });
+        }
+
+        document.getElementById('nextAdv').addEventListener('click', () => {
+            const firstItem = advantages.shift();
+            advantages.push(firstItem);
+            renderAdvantages();
+        });
+
+        document.getElementById('prevAdv').addEventListener('click', () => {
+            const lastItem = advantages.pop();
+            advantages.unshift(lastItem);
+            renderAdvantages();
+        });
+
+        renderAdvantages();
+
+        //Фильтрация каталога
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const products = document.querySelectorAll('.product-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                products.forEach(product => {
+                    if (filter === 'all' || product.getAttribute('data-category') === filter) {
+                        product.style.display = 'block';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        //Форма подписки
+        document.getElementById('subscribeForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('subName').value;
+            const email = document.getElementById('subEmail').value;
+
+            showAlert(`Спасибо, ${name}! Вы успешно подписались на рассылку на адрес ${email}.`);
+            this.reset();
+        });
+
+        //Модальные окна
+        const modals = document.querySelectorAll('.modal');
+        const closeBtns = document.querySelectorAll('.close-btn');
+
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        closeBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                this.closest('.modal').style.display = 'none';
+            });
+        });
+
+        window.addEventListener('click', function (e) {
+            modals.forEach(modal => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+
+        //Кнопка "Заказать звонок"
+        document.getElementById('callOrderBtn').addEventListener('click', () => openModal('callModal'));
+
+        document.getElementById('callForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            this.closest('.modal').style.display = 'none';
+            showAlert('Ваш заказ на звонок принят! Мы свяжемся с вами в ближайшее время.');
+            this.reset();
+        });
+
+        //Кнопки "Написать"
+        const consultBtns = document.querySelectorAll('.open-consult-btn');
+        consultBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                const name = this.getAttribute('data-name');
+                document.getElementById('consultTitle').textContent = `Написать: ${name}`;
+                openModal('consultModal');
+            });
+        });
+
+        document.getElementById('consultForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            this.closest('.modal').style.display = 'none';
+            showAlert('Ваше сообщение отправлено! Консультант свяжется с вами.');
+            this.reset();
+        });
+
+        //Полезная информация
+        const infoCards = document.querySelectorAll('.info-card');
+        infoCards.forEach(card => {
+            card.addEventListener('click', function () {
+                const text = this.getAttribute('data-info');
+                document.getElementById('infoText').textContent = text;
+                openModal('infoModal');
+            });
+        });
+
+        //Уведомление
+        function showAlert(message) {
+            document.getElementById('alertText').textContent = message;
+            openModal('alertModal');
+            setTimeout(() => {
+                document.getElementById('alertModal').style.display = 'none';
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
